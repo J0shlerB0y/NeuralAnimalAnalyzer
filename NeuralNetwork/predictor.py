@@ -74,14 +74,21 @@ class CavyPredictor:
             query_vec = embedding.cpu().numpy()
             distances, indices = self.neigh.kneighbors(query_vec)
             
-            similar_path = self.db_paths[indices[0][0]]
-
+            raw_path = str(self.db_paths[indices[0][0]])
+            
+            clean_path = raw_path.replace('\\', '/')
+            
+            if "dataset" in clean_path:
+                idx = clean_path.find("dataset")
+                clean_path = clean_path[idx:]
+            
+            similar_path = clean_path
             found_img_bytes = b""
             try:
                 with open(similar_path, "rb") as f:
                     found_img_bytes = f.read()
             except Exception as e:
-                print(f"⚠️ Ошибка чтения файла {similar_path}: {e}")
+                print(f"Ошибка чтения файла (исправленный путь: {similar_path}): {e}")
 
             return {
                 "species": predicted_class,

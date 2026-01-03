@@ -1,0 +1,29 @@
+services:
+  ai-server:
+    build:
+      context: ./NeuralNetwork
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./NeuralNetwork/dataset:/app/dataset
+    networks:
+      - animal-net
+
+  web-app:
+    build:
+      context: ./Web/WebAnimalAnalyzer
+      dockerfile: Dockerfile
+    ports:
+      - "80:8080"
+    environment:
+      - AI_SERVICE_URL=http://ai-server:50051
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - ai-server
+    networks:
+      - animal-net
+
+networks:
+  animal-net:
+    driver: bridge
