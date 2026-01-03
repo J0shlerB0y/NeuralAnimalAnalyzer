@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "NeuralNetwork.Grpc";
+
+service AnimalRecognizer {
+  rpc IdentifySpecies (ImageRequest) returns (RecognitionResponse);
+}
+
+message ImageRequest {
+  bytes image_data = 1;
+}
+
+message RecognitionResponse {
+  string species_name = 1;
+  float confidence = 2;
+  string similar_image_path = 3; 
+  bytes similar_image_data = 4;
+}

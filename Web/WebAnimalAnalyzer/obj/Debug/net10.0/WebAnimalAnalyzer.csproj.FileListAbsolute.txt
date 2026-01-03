@@ -96,3 +96,11 @@ C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAn
 C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\WebAnimalAnalyzer.pdb
 C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\WebAnimalAnalyzer.genruntimeconfig.cache
 C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\ref\WebAnimalAnalyzer.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\WebAnimalAnalyzer.csproj.AssemblyReference.cache
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\WebAnimalAnalyzer.sourcelink.json
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\bin\Debug\net10.0\Google.Protobuf.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\bin\Debug\net10.0\Grpc.Core.Api.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\bin\Debug\net10.0\Grpc.Net.Client.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\bin\Debug\net10.0\Grpc.Net.ClientFactory.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\bin\Debug\net10.0\Grpc.Net.Common.dll
+C:\Users\artem\OneDrive\Документы\GitHub\NeuralAnimalAnalyzer\Web\WebAnimalAnalyzer\obj\Debug\net10.0\WebAnima.F6084747.Up2Date

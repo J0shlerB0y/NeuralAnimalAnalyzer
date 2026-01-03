@@ -1,8 +1,81 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model WebAnimalAnalyzer.Models.AnalysisViewModel
+
+@{
+    ViewData["Title"] = "Распознавание Свинковых";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4">Cavy Recognizer</h1>
 </div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form asp-action="Index" enctype="multipart/form-data" method="post">
+                    <div class="mb-3">
+                        <label asp-for="UploadedImage" class="form-label">Выберите изображение</label>
+                        <input asp-for="UploadedImage" type="file" class="form-control" accept="image/*" />
+                        <span asp-validation-for="UploadedImage" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Распознать</button>
+                </form>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3">
+                @Model.ErrorMessage
+            </div>
+        }
+    </div>
+</div>
+
+@if (Model.IsAnalyzed)
+{
+    <hr class="my-5" />
+
+    <div class="row text-center">
+        <h2 class="mb-4 text-success">Результат анализа</h2>
+
+        <div class="col-md-6">
+            <div class="card border-primary h-100">
+                <div class="card-header bg-primary text-white">Ваше фото</div>
+                <div class="card-body d-flex align-items-center justify-content-center bg-light">
+                    @if (!string.IsNullOrEmpty(Model.UserImageBase64))
+                    {
+                        <img src="@Model.UserImageBase64" class="img-fluid rounded" style="max-height: 300px;" />
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-success h-100">
+                <div class="card-header bg-success text-white">
+                    Нейросеть считает, что это: <strong>@Model.SpeciesName</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Уверенность: @(Math.Round(Model.Confidence * 100, 1))%</h5>
+
+                    <div class="mt-3 mb-3 d-flex align-items-center justify-content-center bg-light" style="min-height: 200px;">
+                        @if (!string.IsNullOrEmpty(Model.SimilarImageBase64))
+                        {
+                            <img src="@Model.SimilarImageBase64" class="img-fluid rounded" style="max-height: 300px;" />
+                        }
+                        else
+                        {
+                            <span class="text-muted">Не удалось загрузить похожую картинку</span>
+                        }
+                    </div>
+
+                    <p class="text-muted small">
+                        Найден похожий пример в базе:<br />
+                        <code>@Model.SimilarImagePath</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

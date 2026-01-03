@@ -1,0 +1,8 @@
+grpcio
+grpcio-tools
+torch
+torchvision
+numpy
+scikit-learn
+pillow
+--extra-index-url https://download.pytorch.org/whl/cpu
