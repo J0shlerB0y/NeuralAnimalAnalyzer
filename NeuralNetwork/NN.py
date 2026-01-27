@@ -34,7 +34,7 @@ class CavyNet(nn.Module):
 
 def train_model():
     train_dataset = datasets.ImageFolder("dataset", transform=data_transforms)
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
     
     class_names = train_dataset.classes
     print(f"Классы: {class_names}")
@@ -42,10 +42,10 @@ def train_model():
     model = CavyNet(num_classes=len(class_names)).to(DEVICE)
     
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
     
     model.train()
-    for epoch in range(15):
+    for epoch in range(9):
         running_loss = 0.0
         print(f"start epoch {epoch+1} train")
         for inputs, labels in train_loader:
@@ -85,7 +85,7 @@ def create_embeddings_database():
     all_embeddings = []
     all_paths = [s[0] for s in dataset.samples]
     
-    print("Генерация эмбеддингов для базы")
+    print("Генерация эмбеддингов")
     with torch.no_grad():
         for inputs, _ in loader:
             inputs = inputs.to(DEVICE)
@@ -96,7 +96,7 @@ def create_embeddings_database():
     
     np.save("database_embeddings.npy", all_embeddings)
     np.save("database_paths.npy", np.array(all_paths))
-    print("База эмбеддингов создана.")
+    print("База эмбеддингов создана")
 
 class CavyPredictor:
     def __init__(self):
