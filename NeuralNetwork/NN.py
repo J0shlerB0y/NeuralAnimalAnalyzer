@@ -21,21 +21,14 @@ class CavyNet(nn.Module):
         super(CavyNet, self).__init__()
         self.backbone = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
         
-        # Забираем количество входных признаков перед последним слоем (обычно 2048)
         num_features = self.backbone.fc.in_features
         
-        # Убираем последний слой (fc), чтобы получать эмбеддинги
-        # Мы заменяем self.backbone.fc на Identity (пустышку), 
-        # чтобы форвард пасс возвращал векторы 2048
         self.backbone.fc = nn.Identity()
         
-        # Создаем свой классификатор
         self.classifier = nn.Linear(num_features, num_classes)
 
     def forward(self, x):
-        # Получаем эмбеддинг (вектор признаков)
         embeddings = self.backbone(x)
-        # Получаем предсказание класса
         logits = self.classifier(embeddings)
         return logits, embeddings
 
@@ -78,7 +71,6 @@ def train_model():
     print("Модель обучена и сохранена.")
 
 def create_embeddings_database():
-    # Загружаем модель
     import json
     with open("class_mapping.json", "r") as f:
         class_names = json.load(f)
@@ -108,38 +100,31 @@ def create_embeddings_database():
 
 class CavyPredictor:
     def __init__(self):
-        # Загрузка метаданных
         import json
         with open("class_mapping.json", "r") as f:
             self.class_names = json.load(f)
             
-        # Загрузка модели
         self.model = CavyNet(num_classes=len(self.class_names)).to(DEVICE)
         self.model.load_state_dict(torch.load("cavy_model.pth", map_location=DEVICE))
         self.model.eval()
         
-        # Загрузка базы для поиска похожих
         self.db_embeddings = np.load("database_embeddings.npy")
         self.db_paths = np.load("database_paths.npy")
         
-        # Инициализация поиска ближайших соседей (используем косинусное расстояние или евклидово)
         self.neigh = NearestNeighbors(n_neighbors=1, metric='cosine')
         self.neigh.fit(self.db_embeddings)
         
     def predict(self, image_path):
-        # Загрузка и подготовка картинки
         img = Image.open(image_path).convert('RGB')
         img_tensor = data_transforms(img).unsqueeze(0).to(DEVICE)
         
         with torch.no_grad():
             logits, embedding = self.model(img_tensor)
             
-        # Определение вида
         probs = torch.nn.functional.softmax(logits, dim=1)
         conf, pred_idx = torch.max(probs, 1)
         predicted_class = self.class_names[pred_idx.item()]
         
-        # Поиск похожего
         # embedding нужно перевести в numpy
         query_vec = embedding.cpu().numpy()
         distances, indices = self.neigh.kneighbors(query_vec)
