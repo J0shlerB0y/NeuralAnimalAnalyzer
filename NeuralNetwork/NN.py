@@ -153,9 +153,9 @@ class CavyPredictor:
         }
 
 if __name__ == "__main__":
-    #train_model()
+    train_model()
     
-    #create_embeddings_database()
+    create_embeddings_database()
     
     predictor = CavyPredictor()
     result = predictor.predict("testImg.jpg")

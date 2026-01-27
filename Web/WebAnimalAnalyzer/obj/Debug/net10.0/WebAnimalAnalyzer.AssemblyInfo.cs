@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAnimalAnalyzer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fab8a4bcf4f20d510f9834b2cfae56bf966db1d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27c4c3da661b087443b260b4d75c3449435dd6a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAnimalAnalyzer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAnimalAnalyzer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
