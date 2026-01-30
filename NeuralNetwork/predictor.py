@@ -38,8 +38,6 @@ class CavyPredictor:
         mapping_path = os.path.join(model_dir, "class_mapping.json")
         emb_path = os.path.join(model_dir, "database_embeddings.npy")
         paths_path = os.path.join(model_dir, "database_paths.npy")
-
-        print(f"Инициализация модели на {DEVICE}...")
         
         if not os.path.exists(mapping_path):
             raise FileNotFoundError("Файлы модели не найдены!")

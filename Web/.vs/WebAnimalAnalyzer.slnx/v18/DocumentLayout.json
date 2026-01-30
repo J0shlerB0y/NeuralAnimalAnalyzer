@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|solutionrelative:webanimalanalyzer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|c:\\users\\artem\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\neuralanimalanalyzer\\web\\webanimalanalyzer\\models\\analysisviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|solutionrelative:webanimalanalyzer\\models\\analysisviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|c:\\users\\artem\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\neuralanimalanalyzer\\web\\webanimalanalyzer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|solutionrelative:webanimalanalyzer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|c:\\users\\artem\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\neuralanimalanalyzer\\web\\webanimalanalyzer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|solutionrelative:webanimalanalyzer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|c:\\users\\artem\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\neuralanimalanalyzer\\web\\webanimalanalyzer\\models\\analysisviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|solutionrelative:webanimalanalyzer\\models\\analysisviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4208F285-C43B-DAD4-DE20-071792A4FA0B}|WebAnimalAnalyzer\\WebAnimalAnalyzer.csproj|c:\\users\\artem\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\neuralanimalanalyzer\\web\\webanimalanalyzer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebAnimalAnalyzer\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebAnimalAnalyzer\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T08:13:37.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Program.cs",
               "RelativeDocumentMoniker": "WebAnimalAnalyzer\\Program.cs",
@@ -42,12 +59,11 @@
               "RelativeToolTip": "WebAnimalAnalyzer\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T14:48:41.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T14:48:41.427Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AnalysisViewModel.cs",
               "DocumentMoniker": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Models\\AnalysisViewModel.cs",
               "RelativeDocumentMoniker": "WebAnimalAnalyzer\\Models\\AnalysisViewModel.cs",
@@ -55,18 +71,17 @@
               "RelativeToolTip": "WebAnimalAnalyzer\\Models\\AnalysisViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T14:47:49.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T14:47:49.57Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebAnimalAnalyzer\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebAnimalAnalyzer\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-03T14:02:49.651Z",
               "EditorCaption": ""
@@ -79,7 +94,7 @@
               "RelativeDocumentMoniker": "WebAnimalAnalyzer\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\artem\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\NeuralAnimalAnalyzer\\Web\\WebAnimalAnalyzer\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebAnimalAnalyzer\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-03T14:02:41.12Z",
               "EditorCaption": ""

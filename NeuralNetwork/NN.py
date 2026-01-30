@@ -47,20 +47,20 @@ def train_model():
     model.train()
     for epoch in range(9):
         running_loss = 0.0
-        print(f"start epoch {epoch+1} train")
+        print(f"начало эрохи {epoch+1}")
         for inputs, labels in train_loader:
             inputs, labels = inputs.to(DEVICE), labels.to(DEVICE)
             
             optimizer.zero_grad()
             
-            logits, _ = model(inputs) # Эмбеддинги при обучении не нужны
+            logits, _ = model(inputs)
             loss = criterion(logits, labels)
             
             loss.backward()
             optimizer.step()
             
             running_loss += loss.item()
-        print(f"Epoch {epoch+1}, Loss: {running_loss/len(train_loader)}")
+        print(f"конец {epoch+1} эпохи, loss: {running_loss/len(train_loader)}")
     
     torch.save(model.state_dict(), "cavy_model.pth")
     
@@ -68,7 +68,7 @@ def train_model():
     with open("class_mapping.json", "w") as f:
         json.dump(class_names, f)
         
-    print("Модель обучена и сохранена.")
+    print("обучена")
 
 def create_embeddings_database():
     import json
@@ -85,7 +85,7 @@ def create_embeddings_database():
     all_embeddings = []
     all_paths = [s[0] for s in dataset.samples]
     
-    print("Генерация эмбеддингов")
+    print("гнерация эмбеддингов")
     with torch.no_grad():
         for inputs, _ in loader:
             inputs = inputs.to(DEVICE)
@@ -96,7 +96,7 @@ def create_embeddings_database():
     
     np.save("database_embeddings.npy", all_embeddings)
     np.save("database_paths.npy", np.array(all_paths))
-    print("База эмбеддингов создана")
+    print("эмбеддинги созданы")
 
 class CavyPredictor:
     def __init__(self):
